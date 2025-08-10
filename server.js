@@ -4,12 +4,12 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Serve static files (CSS, images, etc.) from "app" folder
-app.use(express.static(path.join(__dirname, 'app')));
+// Serve static files (CSS, images, etc.) from "public" folder
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Serve the HTML file
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'app', 'elephants.html'));
+    res.sendFile(path.join(__dirname, 'public', 'elephants.html'));
 });
 
 // Start server
